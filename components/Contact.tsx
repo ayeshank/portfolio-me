@@ -1,25 +1,30 @@
 // components/Contact.tsx
 "use client";
-import { FormEvent, useState } from "react";
+
+import { FormEvent, useRef, useState } from "react";
 import { Section, Card } from "./_ui";
+import emailjs from "emailjs-com";
+import { environment } from "@/environment";
 
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "ok" | "err">("idle");
+  const formRef = useRef<HTMLFormElement | null>(null);
 
   async function onSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
-    const fd = new FormData(e.currentTarget);
-    const payload = Object.fromEntries(fd.entries());
+    if (!formRef.current) return;
 
     try {
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      });
-      setStatus(res.ok ? "ok" : "err");
-      if (res.ok) (e.target as HTMLFormElement).reset();
-    } catch {
+      await emailjs.sendForm(
+        environment.EMAIL_SERVICE,
+        environment.EMAIL_TEMPLATE,
+        formRef.current,
+        environment.EMAIL_USER
+      );
+      setStatus("ok");
+      formRef.current.reset();
+    } catch (err) {
+      console.error("EmailJS error:", err);
       setStatus("err");
     }
   }
@@ -31,12 +36,17 @@ export default function Contact() {
           Want to collaborate, hire, or just say hi? Reach out and I’ll respond
           soon.
         </p>
-        <form onSubmit={onSubmit} className="mt-4 grid sm:grid-cols-2 gap-4">
+        {/* 👇 Keep the same form UI; just add ref + use our onSubmit */}
+        <form
+          ref={formRef}
+          onSubmit={onSubmit}
+          className="mt-4 grid sm:grid-cols-2 gap-4"
+        >
           <label className="flex flex-col gap-1">
             <span className="text-sm text-zinc-300">Subject</span>
             <input
               required
-              name="subject"
+              name="subject" // <-- must match EmailJS template variable
               className="rounded-xl bg-zinc-900 border border-white/10 px-3 py-2 text-white"
             />
           </label>
@@ -45,7 +55,7 @@ export default function Contact() {
             <input
               required
               type="email"
-              name="email"
+              name="email" // <-- must match EmailJS template variable
               className="rounded-xl bg-zinc-900 border border-white/10 px-3 py-2 text-white"
             />
           </label>
@@ -54,7 +64,7 @@ export default function Contact() {
             <textarea
               required
               rows={5}
-              name="message"
+              name="message" // <-- must match EmailJS template variable
               className="rounded-xl bg-zinc-900 border border-white/10 px-3 py-2 text-white"
             />
           </label>

@@ -105,34 +105,42 @@ const portfolio = {
         {
           name: "Text Analytics (Large Language Models)",
           outcome:
-            "Learning Outcome: Understanding a major concept of maintaining a balance between PMP Triangle and getting know about different knowledge Areas and phases of PMP.",
+            "Learning Outcome: Learn the Transformer architecture (attention, positional encodings, multi-head attention), tokenization, pre-training/fine-tuning (SFT, LoRA/QLoRA), prompt engineering, evaluation (BLEU/ROUGE, perplexity), embeddings & vector search, and Retrieval-Augmented Generation (RAG) design; deploy LLMs with guardrails and latency/cost optimizations.",
           project:
-            "Hands on Case Study on Harvard Business School PMP SImulation to manage the resource cost and schedule efficiently while delivering level of work.",
-          repo: "https://drive.google.com/drive/folders/148tDjXqMeiYdxWKyBUMQu-YODzVIJoQO?usp=sharing",
+            "Developed a Retrieval-Augmented Generation chatbot to simplify U.S. visa queries by retrieving official policy documents and generating user-friendly responses. Stack: Python, RAG, Vector DB, LLMs.",
+          repo: "https://github.com/ayeshank/IBA-MS-Text-Analytics-Fall-2024",
         },
         {
           name: "Cybersecurity Essentials",
           outcome:
-            "Learning Outcome: Understanding a major concept of maintaining a balance between PMP Triangle and getting know about different knowledge Areas and phases of PMP.",
+            "Learning Outcome:   Gain practical proficiency in network traffic analysis for security; author and enforce network security policies with pfSense; perform threat risk assessments using DREAD; implement AAA (authentication, authorization, accounting) in a Kali Linux–based simulated network; conduct risk analysis with Kaggle’s CISA vulnerability dataset; configure Linux RBAC; execute and mitigate MITM attacks with Kali; and run vulnerability assessments with OpenVAS.",
           project:
-            "Hands on Case Study on Harvard Business School PMP SImulation to manage the resource cost and schedule efficiently while delivering level of work.",
-          repo: "https://drive.google.com/drive/folders/148tDjXqMeiYdxWKyBUMQu-YODzVIJoQO?usp=sharing",
+            "Research Paper on Enhancing Framework-Level Code Security through Large Language Models",
+          repo: "https://drive.google.com/file/d/1wS2GBkGm5nm8msflj3_sK3G_llRXMHOQ/view?usp=sharing",
         },
         {
           name: "Programming Quantum Computers",
           outcome:
-            "Learning Outcome: Understanding a major concept of maintaining a balance between PMP Triangle and getting know about different knowledge Areas and phases of PMP.",
+            "Learning Outcome: Understand quantum computing principles, qubits, gates, and algorithms. Gain hands-on experience with Qiskit for building and simulating quantum circuits, exploring quantum algorithms like Grover's and Shor's, and addressing quantum error correction and real-world applications.",
           project:
-            "Hands on Case Study on Harvard Business School PMP SImulation to manage the resource cost and schedule efficiently while delivering level of work.",
-          repo: "https://drive.google.com/drive/folders/148tDjXqMeiYdxWKyBUMQu-YODzVIJoQO?usp=sharing",
+            "Assignments and Quizzes based on Qiskit and Python Programming",
+          repo: "",
         },
         {
           name: "Requirement Engineering",
           outcome:
-            "Learning Outcome: Understanding a major concept of maintaining a balance between PMP Triangle and getting know about different knowledge Areas and phases of PMP.",
+            "Learning Outcome: Understanding the concepts of requirements gathering, analysis, documentation and management through different techniques and tools.",
           project:
-            "Hands on Case Study on Harvard Business School PMP SImulation to manage the resource cost and schedule efficiently while delivering level of work.",
-          repo: "https://drive.google.com/drive/folders/148tDjXqMeiYdxWKyBUMQu-YODzVIJoQO?usp=sharing",
+            "Requirements Risk Assessment and Management Plan for a Case Study of Nokia Downfall.",
+          repo: "https://drive.google.com/file/d/1ZvcWbdfctPrKxz4Z9436JA3VrWW8PCy_/view?usp=sharing",
+        },
+        {
+          name: "MS Project",
+          outcome:
+            "Learning Outcome: An end-to-end system that automatically turns news from multiple sources into concise, podcast-style audio using large-language-model summarization. A background ingestion engine scrapes, cleans and classifies articles, stores their embeddings in a vector database, and a runtime LLM engine retrieves, summarizes and converts them to speech. Development stack: Scrapy +Python + Fast API backend, Chroma vector DB, local LLMs (Mistral-7B, LLaMA-3B), Edge TTS, Next.js frontend, deployment onAWS and Hugging Face.",
+          project:
+            "AUTOMATED NEWS SUMMARIZATION AND PODCAST GENERATION SYSTEM USING LLMS.",
+          repo: "https://drive.google.com/file/d/192WWMio2F8j4fapYQ8Ijgyz8xgb3Fvla/view?usp=sharing",
         },
       ],
     },
@@ -144,74 +152,127 @@ const portfolio = {
       logo: "/images/nedLogo.png",
       courses: [
         {
-          name: "Software Design",
-          outcome: "Mastered architecture & design patterns",
-          project: "Scalable microservices architecture",
+          name: "Object-Oriented Programming (OOP)",
+          outcome:
+            "Applied classes/objects, encapsulation, inheritance, polymorphism, interfaces, SOLID, exception handling, and basic design patterns with unit testing.",
+          project:
+            "Food Management System in C# (.NET): CRUD for menus, orders, and users; role-based flows; layered design; basic validation and reporting.",
+        },
+        {
+          name: "Data Structures & Algorithms (DSA)",
+          outcome:
+            "Implemented arrays, linked lists, stacks, queues, hash maps, trees/heaps, graphs; sorting/searching; recursion; analyzed time/space using Big-O.",
+          project:
+            "Algorithm toolkit with benchmarks: implemented and profiled sorting, search, and shortest-path routines with comparative performance reports.",
+        },
+        {
+          name: "Operating Systems",
+          outcome:
+            "Understood processes/threads, scheduling, synchronization (mutexes/semaphores), deadlocks, memory management (paging/VM), file systems, and I/O.",
+          project:
+            "Multithreaded Producer–Consumer simulator: bounded buffer with semaphores/mutexes, starvation/deadlock experiments, and scheduler comparisons.",
+        },
+        {
+          name: "Logic Design and Switching Theory",
+          outcome:
+            "Applied Boolean algebra, Karnaugh maps, minimization; designed combinational/sequential circuits and finite state machines (FSM).",
+          project:
+            "Traffic-Light Controller FSM (Logisim/Verilog): designed, minimized, and simulated timing-accurate state transitions with reset/fault handling.",
+        },
+        {
+          name: "Software Architecture",
+          outcome:
+            "Evaluated architectural styles (layered, microservices, event-driven), quality attributes/trade-offs, C4/UML modeling, and architecture documentation (ADRs).",
+          project:
+            "Order & Inventory module blueprint: layered architecture with domain entities/use cases, API contracts, ADRs, and deployment view for scalability.",
         },
       ],
     },
   ] as Degree[],
   experience: [
     {
-      range: "Dec 2023 – Current",
-      title: "AL-FARDAN EXCHANGE – Fintech Project",
+      range: "Dec 2024 - Jan 2026",
+      title: "Massachusetts Medical Society - CLINICIAN Product",
       bullets: [
-        "Implemented authN/authZ in Angular frontend and Spring Boot backend",
-        "Designed funds transfer logic with compliance",
-        "Optimized DB queries and resolved bottlenecks",
-        "Customized Kendo Spreadsheet for financial workflows",
-        "Integrated 3rd-party APIs for currency and real-time updates",
-        "Led agile ceremonies and improved collaboration",
+        "Led development of medium-to-large complexity features with a focus on scalability, performance, and maintainability.",
+        "Drove architectural decisions and milestone planning; delivered a POC for a referral-based sign-in mechanism; ran sprint planning and task breakdown with cross-functional teams.",
+        "Mentored junior developers on frontend best practices and performed detailed code reviews.",
+        "Integrated MuleSoft APIs, Adobe Analytics, and Google Publisher Tags (GPTs) to improve observability, user tracking, and ad revenue.",
+        "Implemented SSR optimizations and introduced multi-session authentication (OpenAthens) for secure, modernized access.",
+        "Contributed to hiring in shadow: evaluated coding assignments and onboarded new frontend engineers.",
+        "Implemented authentication/authorization and gateway mechanisms to enhance medical journal security.",
+        "Added Zod schemas for API request validation to ensure data consistency, type safety, and robust error handling.",
+        "Refactored and organized code for readability, maintainability, and reuse.",
+        "Independently developed the OneAccess application for user access management across journal websites.",
+        "Integrated Redis caching for frequently accessed articles and session data to handle heavy load efficiently.",
+        "Worked in Agile with cross-functional collaboration to meet deadlines and improve development workflows.",
       ],
     },
     {
-      range: "Sep 2022 – Nov 2023",
-      title: "TMX-SD – Sales & Distribution",
+      range: "Dec 2023 - Nov 2024",
+      title: "AL-FARDAN EXCHANGE - Fintech Project",
       bullets: [
-        "Built REST APIs in microservice architecture",
-        "Optimized queries and integrated Azure Blob Storage",
-        "Migrated AngularJS → Angular 14 with clean code",
-        "Implemented scalable patterns for Flutter app",
+        "Led two project modules end-to-end, translating complex client requirements into technical solutions and running UAT for successful delivery.",
+        "Designed a custom Angular rule engine for regulatory compliance and validations.",
+        "Migrated and refactored legacy services into .NET Core microservices to improve reliability.",
+        "Resolved performance bottlenecks by optimizing database queries and fine-tuning the application architecture.",
+        "Engineered an advanced Kendo Spreadsheet customization for financial workflows; documented the solution in a Medium post (see resume).",
+        "Integrated third-party APIs for real-time currency conversion and financial data.",
+        "Served as Scrum Master to streamline Agile ceremonies, improve collaboration, and accelerate delivery.",
+        "Coordinated directly with clients for UAT feedback, driving higher satisfaction and smoother releases.",
       ],
     },
     {
-      range: "Apr 2022 – Aug 2022",
-      title: "Massachusetts Medical Society – Medical Journal",
+      range: "Sep 2022 - Nov 2023",
+      title: "TMX-SD - Sales & Distribution",
       bullets: [
-        "Developed reusable components in a React library",
-        "Integrated the library into a Next.js host app",
-        "Used Directus for API content",
-        "Enabled on-site journal editing with privileges",
-        "Handled SSR challenges across library + host app",
+        "Migrated a large-scale application from AngularJS to Angular 14, modernizing UI/UX and reducing maintenance overhead.",
+        "Designed and implemented EF Core repositories with async LINQ and Dependency Injection.",
+        ".NET Core backend services for data management with query optimization for large datasets.",
+        "Built reusable Angular components following clean architecture principles to improve maintainability.",
+        "Implemented document upload/preview flows integrated with Azure Blob Storage.",
+        "Handled bulk data processing and additional query optimizations for scale.",
+        "Drove performance tuning and scalability improvements in long-running backend services.",
+      ],
+    },
+    {
+      range: "Apr 2022 - Aug 2022",
+      title: "Massachusetts Medical Society - Medical Journal",
+      bullets: [
+        "Developed reusable components in a custom React library and managed versioning after each deployment.",
+        "Integrated the React component library into a parent Next.js application for platform-wide reuse.",
+        "Utilized Directus to manage and consume APIs on the frontend.",
+        "Enabled on-site journal content editing with role-based privilege controls.",
+        "Resolved Next.js SSR challenges arising from separating components into a library and a host app.",
       ],
     },
     // internships
     {
-      range: "Feb 2022 – Mar 2022",
-      title: "Trainee Software Developer – Euronet Worldwide",
+      range: "Feb 2022 - Mar 2022",
+      title: "Trainee Software Developer - Euronet Worldwide",
       bullets: ["Built reusable IBM RPG functions", "Refactored legacy code"],
     },
     {
-      range: "Jul 2021 – Jan 2022",
-      title: "MERN Stack Developer – NI3 Industries",
+      range: "Jul 2021 - Jan 2022",
+      title: "MERN Stack Developer - NI3 Industries",
       bullets: ["Project plan, DB design, agile", "XNA Shares app end-to-end"],
     },
     {
-      range: "Feb 2021 – May 2021",
-      title: "Software Engineering Intern – Signbox",
+      range: "Feb 2021 - May 2021",
+      title: "Software Engineering Intern - Signbox",
       bullets: ["SDLC docs, proposals, SRS, manuals"],
     },
     {
-      range: "Dec 2020 – Mar 2021",
-      title: "ReactJS Developer Intern – CSRD Lab (NEDUET)",
+      range: "Dec 2020 - Mar 2021",
+      title: "ReactJS Developer Intern - CSRD Lab (NEDUET)",
       bullets: [
         "Implemented DEGHJEE catering platform",
         "Managed APIs & MongoDB",
       ],
     },
     {
-      range: "May 2020 – Jul 2020",
-      title: "Front-End Developer Intern – NCAI",
+      range: "May 2020 - Jul 2020",
+      title: "Front-End Developer Intern - NCAI",
       bullets: ["Improved components and responsive layouts"],
     },
   ] as Experience[],
